@@ -17,6 +17,7 @@ module.exports = {
     'comma-dangle': 'off',
     'arrow-parens': 'off',
     'eol-last': 'off',
-    'max-len': 'off'
+    'max-len': 'off',
+    'operator-linebreak': 'off'
   }
 }
