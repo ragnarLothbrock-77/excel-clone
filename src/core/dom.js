@@ -32,12 +32,33 @@ class Dom {
     return this
   }
 
+  closest(selector) {
+    return $(this.$element.closest(selector))
+  }
+
+  getCoords() {
+    return this.$element.getBoundingClientRect()
+  }
+
   on(eventType, callback) {
     this.$element.addEventListener(eventType, callback)
   }
 
   remove(eventType, callback) {
     this.$element.removeEventListener(eventType, callback)
+  }
+
+  findAll(selector) {
+    return this.$element.querySelectorAll(selector)
+  }
+
+
+  css(styles = {}) {
+    Object.keys(styles).forEach(item => this.$element.style[item] = styles[item])
+  }
+
+  get data() {
+    return this.$element.dataset
   }
 }
 
